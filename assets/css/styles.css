@@ -39,6 +39,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 input,
@@ -108,6 +109,57 @@ img {
 .grid {
   display: grid;
   gap: 1.5rem;
+}
+
+.section {
+  padding-block: 7.5rem;
+}
+
+.section__container {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem;
+}
+
+.section__title {
+  font-size: var(--bigger-font-size);
+}
+
+.section__title,
+.section__description {
+  width: 80%;
+}
+
+.section__subtitle {
+  display: block;
+  color: var(--second-color);
+  font-family: var(--second-font);
+  font-size: var(--large-font-size);
+  font-weight: var(--weight-400);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.25rem;
+}
+
+.section__description {
+  margin-bottom: 1.5rem;
+}
+
+.section__data {
+  display: flex;
+  align-items: center;
+  column-gap: 1.25rem;
+}
+
+.section__img {
+  border-radius: 50%;
+}
+
+.section__data-title {
+  font-size: var(--h3-font-size);
+}
+
+.section__data-description {
+  font-style: italic;
 }
 /*=============== HEADER & NAV ===============*/
 .header {
@@ -276,6 +328,91 @@ img {
   width: 30%;
 }
 /*=============== ABOUT ===============*/
+.about__container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about__item {
+  position: relative;
+}
+
+.about__img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.about__top,
+.about__hover {
+  position: absolute;
+}
+
+.about__top {
+  inset: 1.25rem;
+  border: 4px solid var(--first-color);
+  transition: var(--transition);
+}
+
+.about__top-title {
+  background-color: var(--first-color);
+  padding-block: 0.75rem;
+  font-size: var(--h3-font-size);
+  text-align: center;
+  position: absolute;
+  bottom: -1px;
+  inset-inline: -2px;
+}
+
+.about__top,
+.about__top-title,
+.about__img {
+  border-radius: 1.75rem;
+}
+
+.about__hover {
+  inset: 0;
+  border-radius: 1.75rem;
+  background-color: hsla(349, 89%, 55%, 0.9);
+  padding-inline: 2.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  transform: rotateY(90deg) scale(0.5);
+  transition: var(--transition);
+}
+
+.about__item:hover .about__hover {
+  transform: rotateY(0) scale(1);
+}
+
+.about__item:hover .about__top {
+  opacity: 0;
+}
+
+.about__hover-title,
+.about__hover-description {
+  color: var(--body-color);
+}
+
+.about__hover-title {
+  font-size: var(--h2-font-size);
+}
+
+.about__hover-description {
+  margin-block: 1.25rem 2.5rem;
+}
+
+.about__btn {
+  background-color: var(--body-color);
+  color: var(--title-color);
+}
+.about__btn::before {
+  all: unset;
+}
+
+
+
+
+
 
 /*=============== MENU ===============*/
 
