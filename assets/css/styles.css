@@ -1,0 +1,91 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Fredoka+One&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: ;
+
+  /*========== Colors ==========*/
+  /* Color mode HSL(hue, saturation, lightness) */
+  --first-color: ;
+  --second-color: ;
+  --title-color: ;
+  --text-color: ;
+  --body-color: ;
+  --container-color: ;
+
+  /*========== Font and typography ==========*/
+  /* .5rem = 8px | 1rem = 16px ... */
+  --body-font: ;
+  --second-font: ;
+  --biggest-font-size: ;
+  --bigger-font-size: ;
+  --h1-font-size: ;
+  --h2-font-size: ;
+  --h3-font-size: ;
+  --larger-font-size: ;
+  --large-font-size: ;
+  --normal-font-size: ;
+
+  /*========== Font weight ==========*/
+  --weight-400: ;
+
+  /*========== Transition ==========*/
+  --transition: ;
+}
+
+/*=============== BASE ===============*/
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+/*=============== HEADER & NAV ===============*/
+
+/* Active link */
+
+/*=============== HOME ===============*/
+
+/* Swiper */
+
+/*=============== BUTTON ===============*/
+
+/*=============== ABOUT ===============*/
+
+/*=============== MENU ===============*/
+
+/*=============== SERVICES ===============*/
+
+/*=============== DEALS ===============*/
+
+/*=============== MENU ===============*/
+
+/*=============== RESERVATION ===============*/
+
+/*=============== GALLERY ===============*/
+
+/*=============== FOOTER ===============*/
+
+/*=============== SCROLL UP ===============*/
+
+/* Show Scroll Up */
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+/* For medium devices */
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 450px) {
+}
