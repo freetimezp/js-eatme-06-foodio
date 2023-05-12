@@ -604,7 +604,51 @@ img {
 }
 
 /*=============== SERVICES ===============*/
+.services .section__container {
+  align-items: center;
+}
 
+.services__container {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.services__item {
+  text-align: center;
+  transition: var(--transition);
+}
+
+.services__img-wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--first-color);
+  border: 5px solid var(--body-color);
+  outline: 5px solid var(--first-color);
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+  transition: var(--transition);
+}
+
+.services__item:hover .services__img-wrapper{
+  border: 10px solid var(--first-color);
+  outline: 0 solid var(--body-color);
+}
+
+.services__img {
+  width: 76px;
+}
+
+.services__title {
+  font-size: var(--h3-font-size);
+  margin-block: 1.25rem 0.25rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.services__title:hover {
+  color: var(--second-color);
+}
 /*=============== DEALS ===============*/
 
 /*=============== MENU ===============*/
