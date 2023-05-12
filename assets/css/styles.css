@@ -434,7 +434,7 @@ img {
   background-color: var(--container-color);
 }
 
-.menu__container {
+.menu-one .menu__container {
   grid-template-columns: repeat(3, 1fr);
   align-items: flex-start;
 }
@@ -443,6 +443,9 @@ img {
   background-color: var(--body-color);
   border-radius: 1.5rem;
   position: relative;
+}
+
+.menu-one .menu__item {
   margin-left: 5.25rem;
   padding: 3.25rem 1.5rem 3.25rem 7.5rem;
 }
@@ -450,11 +453,15 @@ img {
 .menu__img-wrapper,
 .menu__img-wrapper::before {
   position: absolute;
+}
+
+.menu-one .menu__img-wrapper,
+.menu-one .menu__img-wrapper::before {
   top: 50%;
   transform: translateY(-50%);
 }
 
-.menu__img-wrapper {
+.menu-one .menu__img-wrapper {
   left: -5.25rem;
 }
 
@@ -462,6 +469,9 @@ img {
   content: '';
   background-color: var(--second-color);
   border-radius: 5.5rem;
+}
+
+.menu-one .menu__img-wrapper::before {
   left: 0;
   width: 70%;
   height: 115%;
@@ -762,7 +772,46 @@ img {
 .deals__price del {
   font-size: var(--h3-font-size);
 }
+
 /*=============== MENU ===============*/
+.menu-two .menu__container {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.menu-two .menu__item {
+  padding: 2.5rem;
+  padding-top: 6.5rem;
+  margin-top: 7rem;
+  transition: var(--transition);
+}
+
+.menu-two .menu__item:hover .menu__img-wrapper::before {
+  background-color: rgb(148, 127, 242);
+}
+
+.menu-two .menu__img-wrapper,
+.menu-two .menu__img-wrapper::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-two .menu__img-wrapper {
+  top: -38%;
+  width: max-content;
+}
+
+.menu-two .menu__img-wrapper::before {
+  width: 154%;
+  height: 100px;
+  top: 6rem;
+}
+
+.menu__grams {
+  font-family: var(--second-font);
+  font-weight: var(--weight-400);
+  display: block;
+  margin-bottom: 0.5rem;
+}
 
 /*=============== RESERVATION ===============*/
 
