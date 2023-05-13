@@ -961,6 +961,95 @@ img {
 }
 
 /*=============== FOOTER ===============*/
+.footer {
+  background-image: url(../img/footer-bg.jpg);
+}
+
+.footer__container {
+  grid-template-columns: 8fr 5fr;
+  column-gap: 6rem;
+  position: relative;
+  z-index: 10;
+}
+
+.footer__description,
+.footer__title,
+.newsletter__description {
+  color: var(--body-color);
+}
+
+.footer__description {
+  font-size: var(--large-font-size);
+  margin-block: 2rem 3.75rem;
+}
+
+.footer__title {
+  font-size: var(--h3-font-size);
+  border-bottom: 6px solid var(--first-color);
+  margin-bottom: 2.5rem;
+  display: inline-block;
+}
+
+.newsletter__description {
+  margin-bottom: 1rem;
+}
+
+.footer__subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+  row-gap: 1.75rem;
+}
+
+.footer__subscribe .button {
+  cursor: pointer;
+}
+
+.footer__input {
+  color: var(--body-color);
+  border: 1px solid hsl(0, 0%, 38%);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  flex-grow: 1;
+}
+
+.footer__list {
+  margin-bottom: 2.5rem;
+}
+
+.footer__list dt {
+  float: left;
+}
+
+.footer__list :is(dt, dd) {
+  color: var(--body-color);
+  font-family: var(--second-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.footer__list dd {
+  margin-left: 7rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer .reservation__card-data {
+  color: var(--body-color);
+}
+
+.footer__copy {
+  background-color: var(--title-color);
+  padding-block: 2rem;
+  text-align: center;
+  color: var(--body-color);
+  font-family: var(--second-font);
+  letter-spacing: 1px;
+  font-size: var(--large-font-size); 
+}
+
+.footer__copy span {
+  color: var(--second-color);
+}
 
 /*=============== SCROLL UP ===============*/
 .scrollup {
