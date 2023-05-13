@@ -1078,21 +1078,335 @@ img {
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+  :root {
+    --biggest-font-size: 4.5rem;
+    --bigger-font-size: 3rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --larger-font-size: 1.125rem;
+    --large-font-size: 1rem;
+    --normal-font-size: 0.9375rem;
+  }
+  .home::before {
+    width: 680px;
+    height: 340px;
+  }
+  .title-center::after {
+    width: 240px;
+    height: 10px;
+  }
+  .menu-one .menu__item {
+    margin-left: 4rem;
+  }
+  .menu-one .menu__img-wrapper {
+    left: -4rem;
+    width: 184px;
+    height: 167px;
+  }
+  .menu__btn {
+    width: 40px;
+    height: 40px;
+  }
+  .menu__btn i {
+    font-size: 1.5rem;
+  }
+  .opening {
+    padding: 2rem;
+  }
+  .opening__list dd {
+    margin-bottom: 1rem;
+  }
+
+  .menu-two .menu__img-wrapper {
+    width: 175px;
+  }
+  .menu-two .menu__img-wrapper::before {
+    width: 145%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .nav__logo-img,
+  .footer__logo-img {
+    width: 130px;
+  }
+  .reservation__btn {
+    display: none;
+  }
+  .logo__mobile,
+  .nav__close,
+  .nav__toggle {
+    display: block;
+  }
+  .nav__menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 500px;
+    height: 100%;
+    background-color: var(--body-color);
+    padding: 3rem 2.5rem;
+    box-shadow: 2px 0 4px hsla(0, 0%, 0%, 0.1);
+    transition: var(--transition);
+  }
+  .show-menu {
+    left: 0;
+  }
+  .logo__mobile {
+    margin-bottom: 2.5rem;
+  }
+  .nav__link:not(.active-link) {
+    color: var(--title-color);
+  }
+  .nav__list {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  .nav__link {
+    font-size: var(--h3-font-size);
+  }
+  .nav__close,
+  .nav__toggle {
+    cursor: pointer;
+  }
+  .nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    color: var(--title-color);
+    font-size: 2.5rem;
+  }
+  .nav__toggle {
+    color: var(--body-color);
+    font-size: 1.75rem;
+  }
+
+  .home {
+    padding-block: 8rem 4rem;
+    height: fit-content;
+  }
+  .home__content,
+  .section__container {
+    grid-template-columns: 1fr; 
+  }
+  .home::before {
+    all: unset;
+  }
+  .home__data {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .home__description,
+  .home__img {
+    margin-inline: auto;
+  }
+  .nav {
+    height: var(--header-height);
+  }
+  .section__container {
+    row-gap: 1.25rem;
+  }
+  .section__title,
+  .section__description {
+    width: 100%;
+  }
+
+  .about__container,
+  .menu-one .menu__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .opening {
+    padding: 1.75rem;
+  }
+  .opening__data {
+    padding: 1rem;
+  }
+
+  .services__container,
+  .menu-two .menu__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tab__btns {
+    padding: 2rem;
+  }
+  .tab__item {
+    padding: 2.5rem;
+  }
 }
 
 /* For medium devices */
 @media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .menu-one .menu__container,
+  .deals__container,
+  .reservation__container,
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+  .menu-two .menu__container,
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .opening__title::after {
+    left: 0;
+  }
+  .opening:hover .opening__title::after {
+    right: 0;
+    width: 100%;
+    left: unset;
+  }
+  .deals__container,
+  .footer__container {
+    row-gap: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  :root {
+    --biggest-font-size: 4rem;
+    --bigger-font-size: 2.5rem;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 97%;
+  }
+  .section {
+    padding-block: 6rem;
+  }
+  .about__container,
+  .services__container,
+  .menu-two .menu__container {
+    grid-template-columns: 1fr;
+  }
+  .title-center::after {
+    max-width: 200px;
+    height: 8px;
+  }
+  .menu-two .menu__item {
+    padding: 1.5rem;
+    padding-top: 6rem;
+    margin-top: 6rem;
+    border-radius: 1rem;
+  }
+  .menu-two .menu__img-wrapper {
+    left: 1.5rem;
+    transform: translateX(0);
+  }
+  .menu-two .menu__img-wrapper::before {
+    all: unset;
+  }
+  .reservation__form-group {
+    grid-template-columns: 1fr;
+  }
+  .reservation__form-group {
+    row-gap: 1.25rem;
+  }
+  .gallery__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .scrollup {
+    width: 50px;
+    height: 50px;
+    border-width: 4px;
+  }
+  .scrollup__icon {
+    font-size: 1.5rem;
+  }
 }
 
 /* For small devices */
 @media screen and (max-width: 576px) {
+  .nav {
+    height: calc(var(--header-height) + 0.5rem);
+  }
+  .nav__logo-img {
+    width: 120px;
+  }
+  .nav__menu {
+    width: 100%;
+    padding-inline: 2rem;
+  }
+  .home {
+    padding-block: 9rem 2.5rem;
+  }
+  :root {
+    --biggest-font-size: 2.5rem;
+    --bigger-font-size: 2rem;
+    --h1-font-size: 1.75rem;
+  }
+  .services__img-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+  .services__img {
+    width: 60px;
+  }
+  .tab__btn::before {
+    width: 12px;
+    height: 12px;
+    margin-right: 0.5rem;
+  }
+  .quality__list {
+    grid-template-columns: 1fr;
+    row-gap: 1.25rem;
+  }
+  .reservation__icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  .reservation__icon {
+    width: 30px;
+  }
+  .swiper-pagination {
+    margin-top: 5rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
+  .about__top {
+    inset: 1rem;
+  }
+  .about__hover {
+    padding-inline: 1.5rem;
+  }
+  .menu-one .menu__item {
+    padding: 1.5rem;
+    padding-top: 6rem;
+    margin-top: 6rem;
+    margin-left: 0;
+    border-radius: 1rem;
+  }
+  .menu-one .menu__img-wrapper {
+    width: 175px;
+    height: 154px;
+    top: -38%;
+    left: 1.5rem;
+    transform: translateY(0);
+  }
+  .tab__item,
+  .tab__btn {
+    padding: 1.75rem;
+  }
+  .tab__btn {
+    padding-left: 2.5rem;
+  }
+  .gallery__container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
 }
