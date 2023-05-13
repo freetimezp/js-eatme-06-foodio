@@ -181,6 +181,10 @@ img {
   background-color: var(--first-color);
 }
 
+.main {
+  overflow: hidden;
+}
+
 /*=============== HEADER & NAV ===============*/
 .header {
   position: absolute;
@@ -889,6 +893,72 @@ img {
 }
 
 /*=============== GALLERY ===============*/
+.gallery {
+  margin-top: 1.25rem;
+}
+
+.gallery__container {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.gallery__item {
+  position: relative;
+}
+
+.gallery__img {
+  vertical-align: middle;
+}
+
+.gallery__hover {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(349, 89%, 55%, 0.8);
+  cursor: pointer;
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.gallery__hover::before,
+.gallery__hover::after {
+  content: '';
+  position: absolute;
+  background-color: var(--body-color);
+  transform: translate(-50%, -50%);
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.gallery__hover::before {
+  left: 50%;
+  top: calc(100% + 40px);
+  width: 3px;
+  height: 40px;
+}
+
+.gallery__hover::after {
+  left: calc(100% + 40px);
+  top: 50%;
+  width: 40px;
+  height: 3px;
+}
+
+.gallery__item:hover .gallery__hover {
+  opacity: 1;
+}
+
+.gallery__item:hover .gallery__hover::before,
+.gallery__item:hover .gallery__hover::after {
+  opacity: 1;
+}
+
+.gallery__item:hover .gallery__hover::before {
+  top: 50%;
+}
+
+.gallery__item:hover .gallery__hover::after {
+  left: 50%;
+}
 
 /*=============== FOOTER ===============*/
 
